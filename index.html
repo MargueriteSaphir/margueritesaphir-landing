@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<!-- saved from url=(0102)file:///Users/nathanaelmpakaedmorin/Documents/Claude/Projects/Marguerite%20Saphir/landing-page-v2.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Révélation de ta Sécurité Digitale — Marguerite Saphir</title>
+<meta name="description" content="Tu as fait le diagnostic. Maintenant, construisons ta vraie sécurité financière — celle qui vient de ce que tu portes en toi. Marguerite Saphir.">
+<link href="./index_files/css2" rel="stylesheet">
+<style>
+:root {
+  --marron: #4A4038;
+  --or: #B8965E;
+  --blanc: #F5F1EC;
+  --blanc2: #EDE0D0;
+  --rouge: #CC1111;
+  --vert: #1E6B2E;
+  --gris-texte: #7A6D65;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'League Spartan',sans-serif; background:#fff; color:var(--marron); }
+
+/* ── NAV ── */
+nav {
+  position:sticky; top:0; z-index:100;
+  background:var(--marron);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:14px 60px; border-bottom:3px solid var(--or);
+}
+.nav-logo { color:var(--or); font-weight:700; font-size:1.1rem; letter-spacing:1px; }
+.nav-logo span { color:#ffffff; font-weight:300; font-size:0.78rem; display:block; }
+.nav-cta {
+  background:var(--or); color:var(--marron);
+  font-family:'League Spartan',sans-serif; font-weight:800; font-size:0.88rem;
+  padding:10px 24px; border-radius:4px; text-decoration:none; transition:opacity .2s;
+}
+.nav-cta:hover { opacity:.85; }
+
+/* ── HERO — ACCROCHE DEPUIS LE DIAGNOSTIC ── */
+.hero {
+  background:var(--marron);
+  padding:80px 60px 60px; text-align:center;
+}
+.hero-eyebrow {
+  color:var(--or); font-weight:300; font-size:0.82rem;
+  letter-spacing:3px; text-transform:uppercase; margin-bottom:20px;
+}
+.hero h1 {
+  color:#fff; font-weight:900; font-size:3.1rem;
+  line-height:1.1; margin-bottom:16px;
+  max-width:860px; margin-left:auto; margin-right:auto;
+}
+.hero h1 em { color:var(--or); font-style:normal; }
+.hero-sub {
+  color:#C4B8A8; font-weight:300; font-size:1.1rem;
+  max-width:640px; margin:0 auto 40px; line-height:1.7;
+}
+.vsl-wrapper {
+  max-width:780px; margin:0 auto 44px;
+  border-radius:12px; overflow:hidden;
+  border:3px solid var(--or);
+  box-shadow:0 20px 60px rgba(0,0,0,0.4);
+  background:#111; aspect-ratio:16/9;
+  position:relative;
+}
+.vsl-placeholder { text-align:center; }
+.vsl-play {
+  width:72px; height:72px; background:var(--or); border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 14px; cursor:pointer;
+}
+.vsl-play::after {
+  content:''; border-top:16px solid transparent; border-bottom:16px solid transparent;
+  border-left:28px solid var(--marron); margin-left:6px;
+}
+.vsl-label { color:#C4B8A8; font-weight:300; font-size:0.9rem; }
+.hero-cta-wrap { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+.btn-primary {
+  background:var(--or); color:var(--marron);
+  font-family:'League Spartan',sans-serif; font-weight:800; font-size:1rem;
+  padding:16px 40px; border-radius:6px; text-decoration:none;
+  transition:transform .2s, opacity .2s; display:inline-block;
+}
+.btn-primary:hover { transform:translateY(-2px); opacity:.9; }
+.btn-ghost {
+  background:transparent; color:#fff;
+  font-family:'League Spartan',sans-serif; font-weight:400; font-size:0.95rem;
+  padding:16px 30px; border-radius:6px; text-decoration:none;
+  border:1px solid rgba(255,255,255,0.25); transition:border-color .2s, color .2s;
+}
+.btn-ghost:hover { border-color:var(--or); color:var(--or); }
+
+/* ── STATS ── */
+.stats { background:var(--or); display:flex; justify-content:center; flex-wrap:wrap; }
+.stat { padding:26px 48px; text-align:center; border-right:1px solid rgba(74,64,56,0.2); }
+.stat:last-child { border-right:none; }
+.stat-num { color:var(--marron); font-weight:900; font-size:1.9rem; display:block; }
+.stat-label { color:rgba(74,64,56,0.7); font-weight:400; font-size:0.82rem; }
+
+/* ── UTIL ── */
+section { padding:80px 60px; }
+section.alt { background:var(--blanc); }
+.inner { max-width:1100px; margin:0 auto; }
+.tag { color:var(--or); font-weight:600; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:12px; }
+.h2 { font-weight:900; font-size:2.2rem; margin-bottom:14px; line-height:1.15; }
+.sub { color:var(--gris-texte); font-weight:400; font-size:1.05rem; line-height:1.65; max-width:600px; }
+.center { text-align:center; }
+.sub-c { color:var(--gris-texte); font-weight:400; font-size:1.05rem; line-height:1.65; max-width:600px; margin:0 auto; }
+
+/* ── 1. FAUSSE SÉCURITÉ ── */
+.fausse-securite {
+  display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;
+}
+.fausse-left {}
+.truth-box {
+  background:var(--marron); border-radius:12px; padding:36px;
+  border-left:5px solid var(--or);
+}
+.truth-box .truth-label { color:var(--or); font-weight:600; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:16px; }
+.truth-box .truth-text { color:#fff; font-weight:300; font-size:1.05rem; line-height:1.75; }
+.truth-box .truth-text strong { color:var(--or); font-weight:700; }
+.contrast-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:32px; }
+.contrast-card { border-radius:10px; padding:22px; }
+.contrast-card.bad { background:rgba(204,17,17,0.07); border:1.5px solid rgba(204,17,17,0.2); }
+.contrast-card.good { background:rgba(30,107,46,0.07); border:1.5px solid rgba(30,107,46,0.2); }
+.contrast-card h4 { font-weight:700; font-size:0.9rem; margin-bottom:8px; }
+.contrast-card.bad h4 { color:var(--rouge); }
+.contrast-card.good h4 { color:var(--vert); }
+.contrast-card p { font-weight:400; font-size:0.88rem; color:var(--gris-texte); line-height:1.5; }
+
+/* ── 2. RÉVÉLATION — DEUX CHEMINS ── */
+.revelation-intro { max-width:740px; margin:0 auto; text-align:center; margin-bottom:50px; }
+.paths-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.path-card { border-radius:12px; overflow:hidden; border:2px solid var(--blanc2); transition:transform .2s; }
+.path-card:hover { transform:translateY(-4px); }
+.path-header { background:var(--marron); padding:30px 26px; }
+.path-icon { font-size:1.8rem; margin-bottom:10px; }
+.path-header h3 { color:var(--or); font-weight:800; font-size:1.1rem; margin-bottom:6px; }
+.path-header p { color:#C4B8A8; font-weight:300; font-size:0.9rem; line-height:1.5; }
+.path-body { background:#fff; padding:26px; }
+.path-body ul { list-style:none; }
+.path-body li { color:var(--marron); font-weight:400; font-size:0.95rem; padding:7px 0 7px 20px; position:relative; line-height:1.5; border-bottom:1px solid var(--blanc); }
+.path-body li:last-child { border-bottom:none; }
+.path-body li::before { content:"✦"; position:absolute; left:0; color:var(--or); font-size:0.65rem; top:10px; }
+
+/* ── 3. REVENUE MATH ── */
+.revenue-bg { background:var(--marron); }
+.revenue-grid { display:flex; gap:18px; justify-content:center; flex-wrap:wrap; margin-top:40px; }
+.revenue-card {
+  background:rgba(255,255,255,0.05); border:1px solid rgba(184,150,94,0.3);
+  border-radius:10px; padding:22px 30px; text-align:center; min-width:150px;
+  transition:background .2s, border-color .2s;
+}
+.revenue-card:hover { background:rgba(184,150,94,0.12); border-color:var(--or); }
+.rev-label { color:var(--or); font-weight:300; font-size:0.88rem; margin-bottom:6px; }
+.rev-amount { color:#fff; font-weight:900; font-size:1.9rem; }
+
+/* ── 4. VALIDATION / FORMATION ── */
+.modules-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:36px; }
+.module-item {
+  background:#fff; border-radius:7px; padding:14px 16px;
+  border:1px solid var(--blanc2); font-size:0.88rem; font-weight:500; line-height:1.4;
+  border-left:3px solid var(--or);
+}
+
+/* ── MYTHES / FAQ ── */
+.myths-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:40px; }
+.myth-card {
+  background:#fff; border-radius:10px; padding:26px;
+  border:1.5px solid var(--blanc2); border-top:3px solid var(--or);
+}
+.myth-q { font-weight:700; font-size:0.95rem; margin-bottom:10px; color:var(--marron); }
+.myth-a { color:var(--gris-texte); font-weight:400; font-size:0.92rem; line-height:1.6; }
+.myth-a strong { color:var(--marron); font-weight:700; }
+
+/* ── CHECK ITEMS ── */
+.check-item { display:flex; align-items:flex-start; gap:20px; margin-bottom:28px; }
+.check-icon {
+  width:40px; height:40px; min-width:40px; background:var(--or); border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; color:var(--marron); font-weight:900; font-size:1rem;
+}
+.check-text { font-weight:400; font-size:1.05rem; line-height:1.65; padding-top:8px; }
+.check-text strong { font-weight:700; }
+
+/* ── VISION ── */
+.vision-list { margin-top:36px; max-width:680px; }
+.vision-item { display:flex; align-items:flex-start; gap:16px; margin-bottom:20px; }
+.vision-icon {
+  width:28px; height:28px; background:var(--or); border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; color:var(--marron); font-weight:900; font-size:0.75rem; margin-top:2px;
+}
+.vision-text { font-weight:400; font-size:1rem; line-height:1.6; }
+.vision-text strong { font-weight:700; }
+
+/* ── OFFRES ── */
+.offres-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:48px; }
+.offre-card { border-radius:12px; overflow:hidden; border:1.5px solid var(--blanc2); transition:transform .2s; }
+.offre-card:hover { transform:translateY(-4px); }
+.offre-card.featured { border-color:var(--or); border-width:2px; }
+.offre-header { background:var(--marron); padding:28px 24px; text-align:center; }
+.offre-card.featured .offre-header { background:linear-gradient(135deg,#5A4438,#3A3028); }
+.badge { display:inline-block; background:var(--or); color:var(--marron); font-size:0.68rem; font-weight:800; padding:3px 10px; border-radius:20px; letter-spacing:1px; text-transform:uppercase; margin-bottom:8px; }
+.offre-name { color:var(--or); font-weight:700; font-size:0.88rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:6px; }
+.offre-price { color:#fff; font-weight:900; font-size:2.2rem; }
+.offre-period { color:#C4B8A8; font-weight:300; font-size:0.82rem; }
+.offre-body { padding:24px; background:#fff; }
+.offre-desc { color:var(--gris-texte); font-weight:400; font-size:0.9rem; line-height:1.6; margin-bottom:16px; }
+.offre-features { list-style:none; margin-bottom:20px; }
+.offre-features li { padding:5px 0; font-size:0.88rem; }
+.offre-features li::before { content:"✦ "; color:var(--or); font-size:0.7rem; }
+.offre-cta {
+  display:block; text-align:center; background:var(--or); color:var(--marron);
+  font-family:'League Spartan',sans-serif; font-weight:700; font-size:0.88rem;
+  padding:12px 24px; border-radius:6px; text-decoration:none;
+}
+
+/* ── BIBLE ── */
+.bible-band {
+  background:var(--blanc); padding:50px 60px; text-align:center;
+  border-top:3px solid var(--blanc2); border-bottom:3px solid var(--blanc2);
+}
+.bible-quote { font-weight:300; font-size:1.35rem; line-height:1.75; color:var(--marron); max-width:680px; margin:0 auto 14px; font-style:italic; }
+.bible-ref { color:var(--or); font-weight:600; font-size:0.88rem; letter-spacing:1px; }
+
+/* ── CTA FINAL ── */
+.final-cta { background:var(--marron); text-align:center; padding:100px 60px; }
+.final-cta h2 { color:#fff; font-weight:900; font-size:2.4rem; margin-bottom:12px; line-height:1.2; }
+.final-cta h2 em { color:var(--or); font-style:normal; }
+.final-cta .sub-cta { color:#C4B8A8; font-weight:300; font-size:1.05rem; max-width:560px; margin:0 auto 32px; line-height:1.7; }
+.cta-steps { display:flex; gap:24px; justify-content:center; margin-bottom:36px; flex-wrap:wrap; }
+.cta-step { text-align:center; }
+.step-num { width:32px; height:32px; background:var(--or); border-radius:50%; color:var(--marron); font-weight:900; font-size:0.9rem; display:flex; align-items:center; justify-content:center; margin:0 auto 8px; }
+.step-txt { color:#C4B8A8; font-weight:300; font-size:0.82rem; }
+.cta-arrow { color:var(--or); font-size:1.4rem; margin-top:8px; }
+
+/* ── FOOTER ── */
+footer { background:#2C2420; padding:36px 60px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
+.footer-logo { color:var(--or); font-weight:700; font-size:0.95rem; }
+.footer-logo span { color:#fff; font-weight:300; display:block; font-size:0.78rem; margin-top:2px; }
+.footer-links { display:flex; gap:24px; }
+.footer-links a { color:#fff; font-weight:300; font-size:0.82rem; text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--or); }
+.footer-copy { color:#fff; font-size:0.78rem; font-weight:300; }
+
+@media(max-width:768px) {
+  nav { padding:14px 20px; }
+  .hero { padding:56px 20px 44px; }
+  .hero h1 { font-size:2rem; }
+  section { padding:56px 20px; }
+  .fausse-securite,.paths-grid,.contrast-grid,.myths-grid,.offres-grid,.modules-grid { grid-template-columns:1fr; }
+  .stats { flex-direction:column; }
+  .stat { border-right:none; border-bottom:1px solid rgba(74,64,56,0.2); }
+  .cta-steps { flex-direction:column; align-items:center; }
+  footer { flex-direction:column; text-align:center; padding:28px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">MARGUERITE SAPHIR <span>Biblical Personal Finance &amp; Digital Wealth</span></div>
+  <a href="https://stan.store/margueritesaphir/p/lindpendance-digitale--formation-mrr-8ja5efmy" class="nav-cta">Rejoindre la formation →</a>
+</nav>
+
+<!-- ══ SECTION 1 — HERO : L'ACCROCHE DEPUIS LE DIAGNOSTIC ══ -->
+<section class="hero">
+  <div class="hero-eyebrow">La Révélation de tes Talents par le Digital</div>
+  <h1>Tu ne peux pas <em>économiser</em><br>ton chemin vers la liberté.</h1>
+  <p class="hero-sub">La vraie sécurité, ce n'est pas le salaire qui tombe. C'est ce que tu portes en toi — tes talents, ta capacité à créer et à multiplier. Et tout ça, tu peux le faire depuis chez toi, en toute discrétion.</p>
+
+  <div class="vsl-wrapper">
+    <iframe width="100%" height="100%" src="./index_files/tAdCMAhd290.html" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px"></iframe>
+  </div>
+  <p style="color:#C4B8A8;font-weight:300;font-size:0.88rem;margin-bottom:32px;letter-spacing:0.5px">▶ Regarde la vidéo — 4 minutes 30 qui peuvent tout changer</p>
+
+  <div class="hero-cta-wrap">
+    <a href="https://stan.store/margueritesaphir/p/lindpendance-digitale--formation-mrr-8ja5efmy" class="btn-primary">Rejoindre L'Indépendance Digitale →</a>
+    <a href="file:///Users/nathanaelmpakaedmorin/Documents/Claude/Projects/Marguerite%20Saphir/landing-page-v2.html#calculateur" class="btn-ghost">Faire le diagnostic d'abord</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><span class="stat-num">0 → 20K€</span><span class="stat-label">en 5 mois</span></div>
+  <div class="stat"><span class="stat-num">30+</span><span class="stat-label">clientes accompagnées</span></div>
+  <div class="stat"><span class="stat-num">100%</span><span class="stat-label">depuis un téléphone</span></div>
+  <div class="stat"><span class="stat-num">Faceless</span><span class="stat-label">ou non — ton choix</span></div>
+</div>
+
+<!-- ══ SECTION 2 — LA FAUSSE SÉCURITÉ ══ -->
+<section class="alt">
+  <div class="inner">
+    <div class="fausse-securite">
+      <div class="fausse-left">
+        <div class="tag">Le pivot</div>
+        <div class="h2">La vraie sécurité financière ne vient pas de ce que tu coupes — mais de ce que tu construis.</div>
+        <p style="color:var(--gris-texte);font-weight:400;font-size:1.05rem;line-height:1.7;margin-bottom:28px">Quand ton seul salaire ne suffit pas à couvrir tes projets — ou simplement à finir le mois sereinement — le premier réflexe c'est de réduire ses dépenses pour se rassurer. Mais soyons honnêtes : couper dans tes dépenses quotidiennes ne supprime pas le plafond invisible qui pèse sur chacune de tes décisions. Tu ne peux pas partir en vacances quand tu veux. Tu ne peux pas dire oui à un bien, à une école, à un projet de vie. Tu ne peux pas choisir — tu calcules. Ce n'est pas un problème de gestion. C'est un problème de système.</p>
+      </div>
+      <div>
+        <div class="truth-box">
+          <div class="truth-label">📖 Ce que la Bible nous dit</div>
+          <div class="truth-text">La vraie sécurité, celle dont la Bible nous parle, ne vient pas du fait de craindre le lendemain ou de mettre sa confiance dans ses propres forces. Elle vient de <strong>la multiplication</strong>.<br><br>« Elle achète un champ après l'avoir bien considéré ; du produit de ses mains elle plante une vigne. »<br><br><strong>— Proverbes 31:16</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3 — LA RÉVÉLATION : DEUX CHEMINS ══ -->
+<section>
+  <div class="inner">
+    <div class="revelation-intro">
+      <div class="tag center">La révélation</div>
+      <div class="h2 center">Le digital est le levier de ta multiplication.</div>
+      <p class="sub-c">Le digital est déjà là. Dans tes mains, dans ton téléphone, dans ton quotidien. Celles qui s'en emparent maintenant construisent leur liberté. Les autres continueront de scroller.</p>
+      <p class="sub-c" style="margin-top:14px">Le digital, ce n'est pas faire des danses sur TikTok. C'est le moyen de sortir ce qui est en toi — tes talents, tes compétences, ton expérience de vie. Ou même ta capacité à revendre des outils qui ont déjà fait leurs preuves.</p>
+    </div>
+    <div class="paths-grid">
+      <div class="path-card">
+        <div class="path-header">
+          <div class="path-icon">💡</div>
+          <h3>Tu as des talents à révéler</h3>
+          <p>Des compétences, une expérience de vie, un savoir-faire à transformer en actif.</p>
+        </div>
+        <div class="path-body">
+          <ul>
+            <li>Structurer ton expertise en ebooks ou mini-formations</li>
+            <li>Lancer un coaching en ligne dans ton domaine</li>
+            <li>Monétiser ton vécu sans grande audience</li>
+            <li>Construire un personal branding — même en faceless</li>
+          </ul>
+        </div>
+      </div>
+      <div class="path-card">
+        <div class="path-header">
+          <div class="path-icon">🔑</div>
+          <h3>Tu pars de zéro</h3>
+          <p>Pas besoin d'inventer quoi que ce soit. Tu utilises des systèmes qui ont déjà fait leurs preuves.</p>
+        </div>
+        <div class="path-body">
+          <ul>
+            <li>MRR : achète les droits de revente une fois, revends à 100%</li>
+            <li>PLR : produits digitaux prêts à vendre immédiatement</li>
+            <li>Affiliation : recommande et touche des commissions</li>
+            <li>Boutique automatisée qui vend à ta place, en silence</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 4 — REVENUE MATH ══ -->
+<section class="revenue-bg">
+  <div class="inner center">
+    <div class="tag" style="color:var(--or)">Apprends, Construis &amp; Transmets</div>
+    <div class="h2" style="color:#fff">Le calcul qui change tout.</div>
+    <p style="color:#C4B8A8;font-weight:300;font-size:1.05rem;max-width:560px;margin:0 auto;line-height:1.7">Quand tu rejoins L'Indépendance Digitale (LID), tu peux immédiatement revendre la formation pour 100% de bénéfices — comme ton premier actif.</p>
+    <div class="revenue-grid">
+      <div class="revenue-card"><div class="rev-label">1 vente</div><div class="rev-amount">597€</div></div>
+      <div class="revenue-card"><div class="rev-label">5 ventes</div><div class="rev-amount">2 985€</div></div>
+      <div class="revenue-card"><div class="rev-label">10 ventes</div><div class="rev-amount">5 970€</div></div>
+      <div class="revenue-card"><div class="rev-label">20 ventes</div><div class="rev-amount">11 940€</div></div>
+    </div>
+    <p style="color:#C4B8A8;font-weight:500;font-size:1rem;margin-top:28px">C'est la même formation que j'ai suivie pour générer <span style="color:var(--or);font-weight:700">6 000€ en 2 mois</span>, depuis mon téléphone.</p>
+  </div>
+</section>
+
+<!-- ══ SECTION 5 — VALIDATION : LID + MODULES ══ -->
+<section id="formation" class="alt">
+  <div class="inner">
+    <div class="tag">Qu'est-ce qu'il y a dedans ?</div>
+    <div class="h2">L'Indépendance Digitale — Jusqu'à 10 sources de revenus.</div>
+    <p class="sub" style="margin-bottom:20px">J'ai moi-même suivi ce programme — c'est mon déclic. Aujourd'hui, je ne me contente pas de le recommander : j'accompagne personnellement mes clientes pour qu'elles transforment cette formation en une réalité concrète.</p>
+
+    <!-- 6 PILIERS -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px">
+
+      <div style="background:#fff;border-radius:10px;padding:26px;border-top:4px solid var(--or);border:1px solid var(--blanc2);border-top-width:4px">
+        <div style="font-size:1.6rem;margin-bottom:10px">📦</div>
+        <div style="font-weight:700;font-size:1rem;margin-bottom:8px;color:var(--marron)">Crée tes produits digitaux</div>
+        <div style="font-weight:400;font-size:0.9rem;color:var(--gris-texte);line-height:1.55">Ebooks, formations, services — transforme ton savoir en produit vendable, même si tu pars de zéro.</div>
+      </div>
+
+      <div style="background:#fff;border-radius:10px;padding:26px;border:1px solid var(--blanc2);border-top:4px solid var(--or)">
+        <div style="font-size:1.6rem;margin-bottom:10px">🎯</div>
+        <div style="font-weight:700;font-size:1rem;margin-bottom:8px;color:var(--marron)">Personal branding &amp; positionnement</div>
+        <div style="font-weight:400;font-size:0.9rem;color:var(--gris-texte);line-height:1.55">Apprends à te positionner et à construire ton image — même sans montrer ton visage.</div>
+      </div>
+
+      <div style="background:#fff;border-radius:10px;padding:26px;border:1px solid var(--blanc2);border-top:4px solid var(--or)">
+        <div style="font-size:1.6rem;margin-bottom:10px">🧠</div>
+        <div style="font-weight:700;font-size:1rem;margin-bottom:8px;color:var(--marron)">Psychologie de vente &amp; attraction</div>
+        <div style="font-weight:400;font-size:0.9rem;color:var(--gris-texte);line-height:1.55">Comment vendre et attirer des clientes naturellement — sans prospecter, sans forcer.</div>
+      </div>
+
+      <div style="background:#fff;border-radius:10px;padding:26px;border:1px solid var(--blanc2);border-top:4px solid var(--or)">
+        <div style="font-size:1.6rem;margin-bottom:10px">⚙️</div>
+        <div style="font-weight:700;font-size:1rem;margin-bottom:8px;color:var(--marron)">Automatisation</div>
+        <div style="font-weight:400;font-size:0.9rem;color:var(--gris-texte);line-height:1.55">Des systèmes qui vendent à ta place, 24h/24 — même quand tu t'occupes de ta famille.</div>
+      </div>
+
+      <div style="background:#fff;border-radius:10px;padding:26px;border:1px solid var(--blanc2);border-top:4px solid var(--or)">
+        <div style="font-size:1.6rem;margin-bottom:10px">🏪</div>
+        <div style="font-weight:700;font-size:1rem;margin-bottom:8px;color:var(--marron)">Boutique &amp; structure</div>
+        <div style="font-weight:400;font-size:0.9rem;color:var(--gris-texte);line-height:1.55">Crée ta boutique en ligne, monte ta structure légale et reçois une bibliothèque de produits PLR à revendre en l'état.</div>
+      </div>
+
+      <div style="background:#fff;border-radius:10px;padding:26px;border:1px solid var(--blanc2);border-top:4px solid var(--or)">
+        <div style="font-size:1.6rem;margin-bottom:10px">🤖</div>
+        <div style="font-weight:700;font-size:1rem;margin-bottom:8px;color:var(--marron)">Plateformes &amp; Intelligence Artificielle</div>
+        <div style="font-weight:400;font-size:0.9rem;color:var(--gris-texte);line-height:1.55">Instagram, TikTok, Pinterest — amplifiés par l'IA pour générer du trafic et des ventes en automatique.</div>
+      </div>
+
+    </div>
+
+    <!-- 10 SOURCES -->
+    <div style="background:var(--marron);border-radius:12px;padding:30px 36px;margin-top:36px">
+      <div style="color:var(--or);font-weight:600;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px">Les 10 sources de revenus enseignées</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <span style="background:rgba(184,150,94,0.15);border:1px solid rgba(184,150,94,0.3);color:#fff;font-weight:400;font-size:0.88rem;padding:6px 14px;border-radius:20px">MRR</span>
+        <span style="background:rgba(184,150,94,0.15);border:1px solid rgba(184,150,94,0.3);color:#fff;font-weight:400;font-size:0.88rem;padding:6px 14px;border-radius:20px">Affiliation</span>
+        <span style="background:rgba(184,150,94,0.15);border:1px solid rgba(184,150,94,0.3);color:#fff;font-weight:400;font-size:0.88rem;padding:6px 14px;border-radius:20px">Ebooks PLR</span>
+        <span style="background:rgba(184,150,94,0.15);border:1px solid rgba(184,150,94,0.3);color:#fff;font-weight:400;font-size:0.88rem;padding:6px 14px;border-radius:20px">UGC</span>
+        <span style="background:rgba(184,150,94,0.15);border:1px solid rgba(184,150,94,0.3);color:#fff;font-weight:400;font-size:0.88rem;padding:6px 14px;border-radius:20px">Community Management</span>
+        <span style="background:rgba(184,150,94,0.15);border:1px solid rgba(184,150,94,0.3);color:#fff;font-weight:400;font-size:0.88rem;padding:6px 14px;border-radius:20px">YouTube faceless</span>
+        <span style="background:rgba(184,150,94,0.15);border:1px solid rgba(184,150,94,0.3);color:#fff;font-weight:400;font-size:0.88rem;padding:6px 14px;border-radius:20px">TikTok faceless</span>
+        <span style="background:rgba(184,150,94,0.15);border:1px solid rgba(184,150,94,0.3);color:#fff;font-weight:400;font-size:0.88rem;padding:6px 14px;border-radius:20px">Pinterest x IA</span>
+        <span style="background:rgba(184,150,94,0.15);border:1px solid rgba(184,150,94,0.3);color:#fff;font-weight:400;font-size:0.88rem;padding:6px 14px;border-radius:20px">Coaching &amp; services</span>
+        <span style="background:rgba(184,150,94,0.15);border:1px solid rgba(184,150,94,0.3);color:#fff;font-weight:400;font-size:0.88rem;padding:6px 14px;border-radius:20px">Créer sa propre formation</span>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:40px">
+      <a href="https://stan.store/margueritesaphir/p/lindpendance-digitale--formation-mrr-8ja5efmy" class="btn-primary">Accéder à la formation →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 6 — POUR QUI + MYTHES ══ -->
+<section>
+  <div class="inner">
+
+    <!-- PARTIE 1 : IDENTIFICATION -->
+    <div class="tag center">Est-ce pour toi ?</div>
+    <div class="h2 center">Tu te reconnais dans l'une de ces phrases ?</div>
+    <div style="max-width:700px;margin:36px auto 0">
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <div class="check-text">Tu as cette sensation que tu n'es pas à ta place — que tu portes en toi <strong>des talents qui restent enfouis.</strong></div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <div class="check-text">Tu veux de la liberté — <strong>travailler depuis chez toi</strong>, ne plus stresser pour les factures, être présente pour ta famille.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <div class="check-text">Tu veux construire quelque chose <strong>aligné avec ta foi</strong> — la saine gestion, multiplier tes talents, non pas l'argent pour l'argent.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <div class="check-text">Tu vois d'autres réussir et tu ne peux pas t'empêcher de penser : <strong>"Si elles y arrivent… pourquoi pas moi ?"</strong></div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <div class="check-text">Tu veux rester <strong>100% discrète</strong> — pas de visage, pas de show-off, ne pas mettre en danger ton travail. Juste construire en silence.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PARTIE 2 : MYTHES — fond différent -->
+<section style="background:var(--blanc2)">
+  <div class="inner">
+    <div class="tag center">Tes doutes, on les connaît.</div>
+    <div class="h2 center" style="margin-bottom:36px">Ce qui t'empêche peut-être de te lancer.</div>
+    <div class="myths-grid">
+      <div class="myth-card">
+        <div class="myth-q">💭 "Je n'ai pas de diplôme."</div>
+        <div class="myth-a">La formation est conçue pour les débutantes complètes. Aucune expertise préalable requise. Tu avances module par module, à ton rythme.</div>
+      </div>
+      <div class="myth-card">
+        <div class="myth-q">💭 "Je ne veux pas montrer mon visage."</div>
+        <div class="myth-a"><strong>Absolument pas obligatoire.</strong> On bâtit en silence, on bâtit pour durer. Pinterest, YouTube automatisé, bots de vente — tout est faceless si tu le veux.</div>
+      </div>
+      <div class="myth-card">
+        <div class="myth-q">💭 "C'est peut-être trop complexe."</div>
+        <div class="myth-a">Les outils digitaux d'aujourd'hui sont accessibles à toutes. Et tu n'avances pas seule — <strong>une communauté WhatsApp privée est incluse</strong> pour avancer entourée.</div>
+      </div>
+      <div class="myth-card">
+        <div class="myth-q">💭 "Je n'ai pas le temps."</div>
+        <div class="myth-a"><strong>1h par soir suffit pour commencer</strong> — regarder les modules, poser les bases. Mais soyons honnêtes : c'est un business. Plus tu investis de temps, plus tu obtiens de résultats. Cette formation n'est pas un raccourci, c'est un système — et les systèmes demandent du travail pour être construits.</div>
+      </div>
+      <div class="myth-card">
+        <div class="myth-q">💭 "C'est peut-être contraire à ma foi."</div>
+        <div class="myth-a">La saine gestion biblique, c'est <strong>multiplier</strong> ce qui t'a été confié — pas l'enterrer par peur. Cette formation est ancrée dans ces principes.</div>
+      </div>
+      <div class="myth-card">
+        <div class="myth-q">💭 "Et si ça ne marche pas pour moi ?"</div>
+        <div class="myth-a">Les méthodes enseignées ont fait leurs preuves. Tu bénéficies aussi de l'accès à la communauté pour partager, apprendre et avancer avec d'autres femmes dans la même démarche.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ SECTION 7 — LA VISION / LA PAIX ══ -->
+<section class="alt">
+  <div class="inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
+      <div>
+        <div class="tag">La vision</div>
+        <div class="h2">Imagine cette version de toi.</div>
+        <div class="vision-list">
+          <div class="vision-item">
+            <div class="vision-icon">✓</div>
+            <div class="vision-text"><strong>Ne plus dépendre d'une seule source.</strong> Chaque mois, plusieurs entrées d'argent — même quand tu t'arrêtes.</div>
+          </div>
+          <div class="vision-item">
+            <div class="vision-icon">✓</div>
+            <div class="vision-text"><strong>Ne plus avoir peur de l'inconnu.</strong> Un fonds d'urgence solide, une liberté de choix réelle.</div>
+          </div>
+          <div class="vision-item">
+            <div class="vision-icon">✓</div>
+            <div class="vision-text"><strong>Avoir la fierté de multiplier.</strong> Savoir que tu es devenue une femme qui fait fructifier ses talents — pas qui les enterre.</div>
+          </div>
+          <div class="vision-item">
+            <div class="vision-icon">✓</div>
+            <div class="vision-text"><strong>Bâtir en silence, pour durer.</strong> Pas de show-off, pas de performance — une liberté discrète et solide.</div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative">
+        <div style="width:100%;border-radius:16px 16px 0 0;height:380px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#3A3028 0%,#5A4840 50%,#3A3028 100%);border:3px solid var(--or);border-bottom:none">
+          <div style="text-align:center;padding:40px">
+            <div style="color:var(--or);font-size:2.2rem;margin-bottom:12px;letter-spacing:6px">✦ ✦ ✦</div>
+            <p style="color:#C4B8A8;font-weight:300;font-size:0.85rem;letter-spacing:3px;text-transform:uppercase">Marguerite Saphir</p>
+          </div>
+        </div>
+        <div style="background:var(--marron);border-radius:0 0 14px 14px;padding:22px 28px;border-left:4px solid var(--or)">
+          <p style="color:#C4B8A8;font-weight:300;font-size:0.95rem;line-height:1.7;font-style:italic">"Ta vraie sécurité, ce n'est pas le salaire qui tombe. C'est ce que tu portes en toi et ta capacité à le transformer en un actif qui t'appartient enfin."</p>
+          <p style="color:var(--or);font-weight:600;font-size:0.82rem;margin-top:12px;letter-spacing:1px">— Marguerite Saphir</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OFFRES ══ -->
+<section id="offres">
+  <div class="inner center">
+    <div class="tag">Rejoins L'Indépendance Digitale</div>
+    <div class="h2">Choisis la formule qui te correspond.</div>
+    <div class="offres-grid">
+
+      <!-- OFFRE 1 — 497€ -->
+      <div class="offre-card">
+        <div class="offre-header">
+          <div class="offre-name">L'Indépendance Digitale</div>
+          <div class="offre-price">497€</div>
+          <div class="offre-period">formation uniquement · accès à vie</div>
+        </div>
+        <div class="offre-body">
+          <p class="offre-desc">L'intégralité de la formation L'Indépendance Digitale — sans communauté WhatsApp ni accompagnement individuel.</p>
+          <ul class="offre-features">
+            <li>30+ modules de L'Indépendance Digitale</li>
+            <li>Droits de revente MRR inclus</li>
+            <li>Accès communauté Skool</li>
+            <li>Scripts de vente prêts à l'emploi</li>
+            <li>Toutes les mises à jour à vie</li>
+          </ul>
+          <a href="https://stan.store/margueritesaphir/p/lindpendance-digitale--formation-mrr-8ja5efmy" class="offre-cta">Rejoindre →</a>
+          <p style="text-align:center;font-size:0.78rem;color:var(--gris-texte);margin-top:10px;font-weight:300">💳 Paiement en 3x ou 4x disponible</p>
+        </div>
+      </div>
+
+      <!-- OFFRE 2 — 597€ -->
+      <div class="offre-card featured">
+        <div class="offre-header">
+          <div class="badge">⭐ La plus populaire</div>
+          <div class="offre-name">L'Indépendance Digitale + Communauté</div>
+          <div class="offre-price">597€</div>
+          <div class="offre-period">formation + communauté WhatsApp · accès à vie</div>
+        </div>
+        <div class="offre-body">
+          <p class="offre-desc">L'intégralité de L'Indépendance Digitale, plus l'accès à ma communauté WhatsApp privée avec 14 sous-groupes.</p>
+          <ul class="offre-features">
+            <li>Formation complète L'Indépendance Digitale</li>
+            <li>Communauté WhatsApp privée (14 sous-groupes)</li>
+            <li>Questions formation, boutique, vente…</li>
+            <li>Groupe de motivation &amp; témoignages</li>
+            <li>Accès direct à ma communauté (plus de 30 clientes)</li>
+          </ul>
+          <a href="https://stan.store/margueritesaphir/p/lindpendance-digitale--formation-mrr-8ja5efmy" class="offre-cta">Rejoindre →</a>
+          <p style="text-align:center;font-size:0.78rem;color:var(--gris-texte);margin-top:10px;font-weight:300">💳 Paiement en 3x ou 4x disponible</p>
+        </div>
+      </div>
+
+      <!-- OFFRE 3 — 797€ -->
+      <div class="offre-card">
+        <div class="offre-header">
+          <div class="offre-name">L'Indépendance Digitale + Communauté + Coaching</div>
+          <div class="offre-price">797€</div>
+          <div class="offre-period">formation + communauté + 3 mois individuel</div>
+        </div>
+        <div class="offre-body">
+          <p class="offre-desc">La formule complète — L'Indépendance Digitale, la communauté WhatsApp et un accompagnement individuel avec moi pendant 3 mois.</p>
+          <ul class="offre-features">
+            <li>Formation complète + Communauté WhatsApp privée</li>
+            <li>3 mois d'accompagnement individuel</li>
+            <li>Stratégie personnalisée à ta situation</li>
+            <li>Suivi de tes avancées et résultats</li>
+          </ul>
+          <a href="https://stan.store/margueritesaphir/p/lindpendance-digitale--formation-mrr-8ja5efmy" class="offre-cta">Rejoindre →</a>
+          <p style="text-align:center;font-size:0.78rem;color:var(--gris-texte);margin-top:10px;font-weight:300">💳 Paiement en 3x ou 4x disponible</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- NOTE PAIEMENT -->
+    <div style="background:var(--blanc);border-radius:10px;padding:18px 24px;margin-top:20px;border:1px solid var(--blanc2);text-align:left">
+      <p style="font-weight:600;font-size:0.88rem;color:var(--marron);margin-bottom:10px">💳 Options de paiement échelonné :</p>
+      <p style="font-weight:300;font-size:0.85rem;color:var(--gris-texte);line-height:1.9">
+        • <strong>Klarna (3x) ou PayPal (4x)</strong> — Accès immédiat à la formation et à la licence MRR complète (100% des profits) dès le premier paiement.<br>
+        • <strong>Mensualités par carte</strong> — Accès immédiat à la formation. La licence MRR complète est activée une fois le montant total réglé. En attendant, vente en affiliation (80% de commission par vente).
+      </p>
+    </div>
+
+    <!-- BANNIÈRE COACHING SEUL -->
+    <div style="margin-top:40px;background:var(--blanc);border:2px solid var(--blanc2);border-radius:12px;padding:32px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px">
+      <div style="text-align:left">
+        <div style="font-weight:700;font-size:1.1rem;color:var(--marron);margin-bottom:6px">Tu as déjà une formation et tu cherches un accompagnement ?</div>
+        <div style="font-weight:300;font-size:0.95rem;color:var(--gris-texte)">Découvre mon offre d'accompagnement individuel, conçue pour celles qui veulent aller plus loin.</div>
+      </div>
+      <a href="file:///Users/nathanaelmpakaedmorin/Documents/Claude/Projects/Marguerite%20Saphir/landing-page-v2.html#" style="background:var(--marron);color:var(--or);font-family:&#39;League Spartan&#39;,sans-serif;font-weight:700;font-size:0.9rem;padding:14px 28px;border-radius:6px;text-decoration:none;white-space:nowrap;flex-shrink:0">En savoir plus →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- BIBLE BAND -->
+<div class="bible-band">
+  <div class="bible-quote">« Fortifie-toi et aie bon courage ! Ne t'effraie point et ne t'épouvante point, car l'Éternel ton Dieu est avec toi dans tout ce que tu entreprendras. »</div>
+  <div class="bible-ref">— Josué 1:9</div>
+</div>
+
+<!-- ══ CTA FINAL — CALCULATEUR D'ABORD ══ -->
+<div class="final-cta" id="calculateur">
+  <div class="h2" style="color:#fff;font-size:2.4rem;margin-bottom:12px">La question n'est plus de savoir si tu peux <em style="color:var(--or);font-style:normal">te le permettre.</em></div>
+  <p class="sub-cta">Commence par un pas simple — et c'est <strong style="color:var(--or)">gratuit</strong>.</p>
+  <p style="color:#C4B8A8;font-weight:300;font-size:0.95rem;max-width:560px;margin:10px auto 32px;line-height:1.7">Le Calculateur du Seuil d'Indépendance est un outil gratuit qui te montre en 5 minutes combien de mois tu pourrais tenir financièrement si ton salaire s'arrêtait demain — et à quel pourcentage ton avenir dépend d'une seule décision de ton employeur.</p>
+
+  <div class="cta-steps">
+    <div class="cta-step">
+      <div class="step-num">1</div>
+      <div class="step-txt">Accède au calculateur gratuit</div>
+    </div>
+    <div style="color:var(--or);font-size:1.5rem;margin-top:6px">→</div>
+    <div class="cta-step">
+      <div class="step-num">2</div>
+      <div class="step-txt">Découvre tes chiffres réels</div>
+    </div>
+    <div style="color:var(--or);font-size:1.5rem;margin-top:6px">→</div>
+    <div class="cta-step">
+      <div class="step-num">3</div>
+      <div class="step-txt">Rejoins L'Indépendance Digitale</div>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+    <a href="https://canva.link/wdmn0liq1jk4qbw" class="btn-primary" style="font-size:1rem;padding:16px 36px">Accéder au Calculateur du Seuil →</a>
+    <a href="https://stan.store/margueritesaphir/p/lindpendance-digitale--formation-mrr-8ja5efmy" class="btn-ghost" style="font-size:1rem;padding:16px 32px">Rejoindre directement →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">MARGUERITE SAPHIR <span>Biblical Personal Finance &amp; Digital Wealth for Women</span></div>
+  <div class="footer-links">
+    <a href="https://instagram.com/marguerite.libre">@marguerite.libre</a>
+    <a href="https://www.tiktok.com/@marguerite.saphir">TikTok</a>
+    <a href="https://stan.store/margueritesaphir">Boutique</a>
+    <a href="file:///Users/nathanaelmpakaedmorin/Documents/Claude/Projects/Marguerite%20Saphir/landing-page-v2.html#offres">Mes offres</a>
+  </div>
+  <div class="footer-copy">© 2026 Marguerite Saphir. Tous droits réservés.</div>
+</footer>
+
+<script>
+// Scroll fluide pour tous les liens ancre
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+  anchor.addEventListener('click', function(e) {
+    var href = this.getAttribute('href');
+    if (!href || href === '#') return;
+    var target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+
+</body></html>
