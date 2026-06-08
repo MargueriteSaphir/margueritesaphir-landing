@@ -244,12 +244,28 @@ footer { background:#2C2420; padding:36px 60px; display:flex; justify-content:sp
 .footer-links a:hover { color:var(--or); }
 .footer-copy { color:#fff; font-size:0.78rem; font-weight:300; }
 
+/* ── TÉMOIGNAGES ── */
+.temo-grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:24px; }
+.temo-grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.temo-card-dark { background:var(--marron); border-radius:14px; padding:32px; border-left:5px solid var(--or); }
+.temo-card-light { background:#fff; border-radius:14px; padding:28px; border:1.5px solid var(--blanc2); border-top:4px solid var(--or); }
+.temo-card-sm { background:var(--marron); border-radius:14px; padding:26px; border-left:4px solid var(--or); }
+.temo-badge-or { background:var(--or); color:var(--marron); font-weight:800; font-size:0.74rem; padding:4px 14px; border-radius:20px; display:inline-block; margin-bottom:18px; letter-spacing:0.5px; }
+.temo-badge-light { background:var(--blanc); color:var(--marron); font-weight:700; font-size:0.74rem; padding:4px 14px; border-radius:20px; display:inline-block; margin-bottom:16px; border:1px solid var(--blanc2); }
+.temo-quote { font-weight:300; font-size:0.97rem; line-height:1.8; font-style:italic; margin-bottom:20px; }
+.temo-quote-dark { color:#fff; }
+.temo-quote-light { color:var(--marron); }
+.temo-avatar { width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:1rem; flex-shrink:0; }
+.temo-name-or { color:var(--or); font-weight:700; font-size:0.88rem; }
+.temo-name-dark { color:var(--marron); font-weight:700; font-size:0.88rem; }
+.temo-sub { font-weight:300; font-size:0.76rem; }
+
 @media(max-width:768px) {
   nav { padding:14px 20px; }
   .hero { padding:56px 20px 44px; }
   .hero h1 { font-size:2rem; }
   section { padding:56px 20px; }
-  .fausse-securite,.paths-grid,.contrast-grid,.myths-grid,.offres-grid,.modules-grid { grid-template-columns:1fr; }
+  .fausse-securite,.paths-grid,.contrast-grid,.myths-grid,.offres-grid,.modules-grid,.temo-grid-2,.temo-grid-3 { grid-template-columns:1fr; }
   .stats { flex-direction:column; }
   .stat { border-right:none; border-bottom:1px solid rgba(74,64,56,0.2); }
   .cta-steps { flex-direction:column; align-items:center; }
@@ -636,6 +652,91 @@ footer { background:#2C2420; padding:36px 60px; display:flex; justify-content:sp
       <a href="#" style="background:var(--marron);color:var(--or);font-family:'League Spartan',sans-serif;font-weight:700;font-size:0.9rem;padding:14px 28px;border-radius:6px;text-decoration:none;white-space:nowrap;flex-shrink:0">En savoir plus →</a>
     </div>
 
+  </div>
+</section>
+
+<!-- ══ TÉMOIGNAGES ══ -->
+<section id="temoignages" class="alt">
+  <div class="inner">
+    <div class="tag center">Elles l'ont fait</div>
+    <div class="h2 center">Des résultats réels.<br>Dans leurs propres mots.</div>
+    <p class="sub-c" style="margin-bottom:48px">Chaque témoignage ici est une vraie conversation, une vraie transformation.</p>
+
+    <div class="temo-grid-2">
+      <div class="temo-card-dark">
+        <div class="temo-badge-or">🎉 5 600 $ EN 8 JOURS</div>
+        <p class="temo-quote temo-quote-dark">"J'ai commencé le digital il y a 10 mois. En 90 jours, je vivais déjà de mes revenus en ligne à plein temps. J'ai littéralement fait plus que le salaire mensuel de mon conjoint qui travaille 40h/semaine — en seulement 8 jours. Merci pour la LID !!"</p>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="temo-avatar" style="background:var(--or);color:var(--marron)">D</div>
+          <div>
+            <div class="temo-name-or">Djadzia Gamache</div>
+            <div class="temo-sub" style="color:#C4B8A8">Formation L'Indépendance Digitale</div>
+          </div>
+        </div>
+      </div>
+      <div class="temo-card-dark">
+        <div class="temo-badge-or">🚀 +12K EN 22 JOURS · 60K AU TOTAL</div>
+        <p class="temo-quote temo-quote-dark">"Aujourd'hui je fête deux victoires : +12k en 22 jours et je viens de dépasser les 60k grâce à LID. Je partais complètement de zéro il y a quelques mois. Je ne savais même pas faire une story. Ce business est incroyable."</p>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="temo-avatar" style="background:var(--or);color:var(--marron)">S</div>
+          <div>
+            <div class="temo-name-or">Sonia M.</div>
+            <div class="temo-sub" style="color:#C4B8A8">Formation L'Indépendance Digitale</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="temo-grid-2">
+      <div class="temo-card-light">
+        <div class="temo-badge-light">💰 PRESQUE 30 K GÉNÉRÉS</div>
+        <p class="temo-quote temo-quote-light">"Depuis janvier j'ai généré 9 110 $ CAD — soit 2 277 $/mois, presque 1 mois de paie de mon travail 9h à 17h. Depuis octobre, je suis maintenant rendue presque à 30 K. Votre tour va venir très bientôt. 😍"</p>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="temo-avatar" style="background:var(--marron);color:var(--or)">T</div>
+          <div>
+            <div class="temo-name-dark">Tanya Champagne</div>
+            <div class="temo-sub" style="color:var(--gris-texte)">Formation L'Indépendance Digitale</div>
+          </div>
+        </div>
+      </div>
+      <div class="temo-card-light">
+        <p class="temo-quote temo-quote-light" style="margin-top:8px">"Forcée de rester allongée depuis 2 jours, je reçois THE notification : +597 € sur mon compte. J'en ai pleuré, sincèrement. Pouvoir respecter son rythme, prendre soin de sa santé, tout en faisant tourner son business — c'est ça l'objectif. 🙏"</p>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="temo-avatar" style="background:var(--marron);color:var(--or)">J</div>
+          <div>
+            <div class="temo-name-dark">Julie L.</div>
+            <div class="temo-sub" style="color:var(--gris-texte)">Formation L'Indépendance Digitale</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin:44px 0 36px">
+      <div style="display:inline-flex;align-items:center;gap:18px">
+        <div style="width:56px;height:1px;background:var(--blanc2)"></div>
+        <span style="color:var(--or);font-weight:600;font-size:0.74rem;letter-spacing:2.5px;text-transform:uppercase">Accompagnement individuel</span>
+        <div style="width:56px;height:1px;background:var(--blanc2)"></div>
+      </div>
+    </div>
+
+    <div class="temo-grid-3">
+      <div class="temo-card-sm">
+        <div class="temo-badge-or" style="font-size:0.72rem;padding:3px 12px;margin-bottom:14px">⚡ VIRALE EN MOINS DE 24H</div>
+        <p class="temo-quote temo-quote-dark" style="font-size:0.9rem;margin-bottom:16px">"J'étais découragée, je n'avais plus posté depuis 2 semaines. J'ai demandé à Marguerite de l'aide pour revoir ma stratégie. En moins de 24h : ma 1ère vidéo virale. +100 likes, +100 commentaires. Merci pour ton accompagnement de qualité vraiment. 😍"</p>
+        <div class="temo-name-or" style="font-size:0.84rem">Zaya</div>
+        <div class="temo-sub" style="color:#C4B8A8">Accompagnement individuel</div>
+      </div>
+      <div class="temo-card-sm">
+        <p class="temo-quote temo-quote-dark" style="font-size:0.9rem;margin-bottom:16px;margin-top:4px">"Je regrette de pas avoir pris l'accompagnement plutôt. Avec toi. Mais bon, je suis là — c'est le principal. 🥹"</p>
+        <div class="temo-name-or" style="font-size:0.84rem">Cliente</div>
+        <div class="temo-sub" style="color:#C4B8A8">Accompagnement individuel</div>
+      </div>
+      <div class="temo-card-sm">
+        <p class="temo-quote temo-quote-dark" style="font-size:0.9rem;margin-bottom:16px;margin-top:4px">"Merci Marguerite, ton accompagnement est juste incomparable, incroyable. Merci pour ton cœur et ton dévouement. 🤍"</p>
+        <div class="temo-name-or" style="font-size:0.84rem">Cliente</div>
+        <div class="temo-sub" style="color:#C4B8A8">Accompagnement individuel</div>
+      </div>
+    </div>
   </div>
 </section>
 
