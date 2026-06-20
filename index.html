@@ -244,12 +244,16 @@ footer { background:#2C2420; padding:36px 60px; display:flex; justify-content:sp
 .footer-links a:hover { color:var(--or); }
 .footer-copy { color:#fff; font-size:0.78rem; font-weight:300; }
 
+/* ── VISION GRID ── */
+.vision-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+
 @media(max-width:768px) {
   nav { padding:14px 20px; }
   .hero { padding:56px 20px 44px; }
   .hero h1 { font-size:2rem; }
   section { padding:56px 20px; }
-  .fausse-securite,.paths-grid,.contrast-grid,.myths-grid,.offres-grid,.modules-grid { grid-template-columns:1fr; }
+  .fausse-securite,.paths-grid,.contrast-grid,.myths-grid,.offres-grid,.modules-grid,.vision-grid { grid-template-columns:1fr; }
+  .vision-grid { gap:32px; }
   .stats { flex-direction:column; }
   .stat { border-right:none; border-bottom:1px solid rgba(74,64,56,0.2); }
   .cta-steps { flex-direction:column; align-items:center; }
@@ -268,8 +272,8 @@ footer { background:#2C2420; padding:36px 60px; display:flex; justify-content:sp
 <!-- ══ SECTION 1 — HERO ══ -->
 <section class="hero">
   <div class="hero-eyebrow">Biblical Personal Finance & Digital Income Building</div>
-  <h1>La femme de Proverbes 31<br>n'attendait pas <em>la permission.</em></h1>
-  <p class="hero-sub">On t'a appris que vouloir plus était contraire à la foi. C'est faux — et la Bible le prouve. J'aide les femmes chrétiennes à bâtir leur patrimoine selon les principes bibliques, avec un actif digital depuis leur téléphone.</p>
+  <h1>Pas de la survie.<br><em>De la vraie richesse.</em></h1>
+  <p class="hero-sub">J'aide les femmes chrétiennes à bâtir une vraie structure, de vrais revenus, une vraie liberté — et quelque chose qui impacte leurs enfants et les générations d'après. Depuis leur téléphone.</p>
 
   <div class="vsl-wrapper">
     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tAdCMAhd290" title="La Révélation de tes Talents par le Digital" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px"></iframe>
@@ -290,14 +294,14 @@ footer { background:#2C2420; padding:36px 60px; display:flex; justify-content:sp
   <div class="stat"><span class="stat-num">Faceless</span><span class="stat-label">ou non — ton choix</span></div>
 </div>
 
-<!-- ══ SECTION 2 — LE BLOCAGE SPIRITUEL ══ -->
+<!-- ══ SECTION 2 — LE PIVOT ══ -->
 <section class="alt">
   <div class="inner">
     <div class="fausse-securite">
       <div class="fausse-left">
-        <div class="tag">Le vrai obstacle</div>
-        <div class="h2">Ce n'est pas un manque de moyen. C'est un manque de <em style="color:var(--or);font-style:normal">permission.</em></div>
-        <p style="color:var(--gris-texte);font-weight:400;font-size:1.05rem;line-height:1.7;margin-bottom:28px">On t'a enseigné — parfois directement, souvent implicitement — que vouloir plus d'argent, c'est de la convoitise. Que l'humilité chrétienne, c'est se contenter de peu. Que prier suffit, et qu'agir montrerait un manque de foi. Alors tu restes. Tu supportes ton manager toxique. Tu calcules avant chaque achat. Tu regardes d'autres construire et tu te demandes si tu en as le droit. Ce n'est pas un problème de compétences. C'est un mensonge spirituel — et la Bible le démonte verset par verset.</p>
+        <div class="tag">Le pivot</div>
+        <div class="h2">La vraie richesse ne vient pas de ce que tu coupes — mais de ce que tu <em style="color:var(--or);font-style:normal">construis.</em></div>
+        <p style="color:var(--gris-texte);font-weight:400;font-size:1.05rem;line-height:1.7;margin-bottom:28px">Quand ton seul salaire ne suffit pas à finir le mois sereinement — le premier réflexe c'est de réduire ses dépenses pour se rassurer. Mais soyons honnêtes : couper dans tes dépenses quotidiennes ne supprime pas le plafond invisible qui pèse sur chacune de tes décisions. Tu ne peux pas partir en vacances quand tu veux. Tu ne peux pas dire oui à un projet de vie. Tu ne peux pas choisir — tu calcules. Ce n'est pas un problème de gestion. C'est un problème de système.</p>
       </div>
       <div>
         <div class="truth-box">
@@ -450,7 +454,7 @@ footer { background:#2C2420; padding:36px 60px; display:flex; justify-content:sp
     <div style="max-width:700px;margin:36px auto 0">
       <div class="check-item">
         <div class="check-icon">✓</div>
-        <div class="check-text">Tu gagnes correctement ta vie — et pourtant <strong>tu ne te sens pas libre.</strong> Tu calcules encore. Tu demandes encore la permission.</div>
+        <div class="check-text">Tu gagnes correctement ta vie — et pourtant <strong>tu ne te sens pas libre.</strong> Tu calcules encore. Tu attends encore le bon moment.</div>
       </div>
       <div class="check-item">
         <div class="check-icon">✓</div>
@@ -480,27 +484,27 @@ footer { background:#2C2420; padding:36px 60px; display:flex; justify-content:sp
     <div class="h2 center" style="margin-bottom:36px">Ce que tu croyais sur l'argent — et ce que la Bible dit vraiment.</div>
     <div class="myths-grid">
       <div class="myth-card">
-        <div class="myth-q">💬 "Vouloir plus d'argent, c'est de la convoitise."</div>
+        <div class="myth-q">💭 "Vouloir plus d'argent, c'est de la convoitise."</div>
         <div class="myth-a">La convoitise, c'est désirer ce qui appartient à autrui. Construire un patrimoine pour ta famille, c'est de <strong>l'intendance</strong>. La femme de Proverbes 31 gérait des champs, des vignes et des transactions commerciales — par elle-même.</div>
       </div>
       <div class="myth-card">
-        <div class="myth-q">💬 "Si Dieu veut que j'aie plus, Il ouvrira une porte."</div>
+        <div class="myth-q">💭 "Si Dieu veut que j'aie plus, Il ouvrira une porte."</div>
         <div class="myth-a">La foi sans actes est morte (Jacques 2:17). Attendre passivement n'est pas de la foi — c'est de la peur déguisée. <strong>Bâtir, c'est honorer ce que Dieu t'a confié.</strong></div>
       </div>
       <div class="myth-card">
-        <div class="myth-q">💬 "Je n'ai pas de diplôme ni d'expertise."</div>
+        <div class="myth-q">💭 "Je n'ai pas de diplôme ni d'expertise."</div>
         <div class="myth-a">La formation est conçue pour les débutantes complètes. Aucun prérequis. Tu avances module par module, à ton rythme — et la communauté est là pour chaque étape.</div>
       </div>
       <div class="myth-card">
-        <div class="myth-q">💬 "L'humilité chrétienne, c'est se contenter de peu."</div>
+        <div class="myth-q">💭 "L'humilité chrétienne, c'est se contenter de peu."</div>
         <div class="myth-a">L'humilité biblique, c'est reconnaître que tout vient de Dieu — <strong>et le faire fructifier</strong>, pas l'enterrer. La parabole des talents ne récompense pas celui qui a caché sa pièce.</div>
       </div>
       <div class="myth-card">
-        <div class="myth-q">💬 "Je ne veux pas montrer mon visage."</div>
+        <div class="myth-q">💭 "Je ne veux pas montrer mon visage."</div>
         <div class="myth-a"><strong>Pas obligatoire.</strong> Pinterest automatisé, YouTube faceless, boutique silencieuse — tu peux construire un actif solide sans jamais te montrer si tu ne le veux pas.</div>
       </div>
       <div class="myth-card">
-        <div class="myth-q">💬 "Je n'ai pas le temps."</div>
+        <div class="myth-q">💭 "Je n'ai pas le temps."</div>
         <div class="myth-a"><strong>1h par soir suffit pour commencer.</strong> Ce n'est pas un raccourci — c'est un système. Les systèmes demandent du travail pour être construits. Mais une fois posés, ils travaillent à ta place.</div>
       </div>
     </div>
@@ -511,7 +515,7 @@ footer { background:#2C2420; padding:36px 60px; display:flex; justify-content:sp
 <!-- ══ SECTION 7 — LA VISION / LA PAIX ══ -->
 <section class="alt">
   <div class="inner">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
+    <div class="vision-grid">
       <div>
         <div class="tag">La vision</div>
         <div class="h2">Imagine cette version de toi.</div>
@@ -535,14 +539,9 @@ footer { background:#2C2420; padding:36px 60px; display:flex; justify-content:sp
         </div>
       </div>
       <div style="position:relative">
-        <div style="width:100%;border-radius:16px 16px 0 0;height:380px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#3A3028 0%,#5A4840 50%,#3A3028 100%);border:3px solid var(--or);border-bottom:none">
-          <div style="text-align:center;padding:40px">
-            <div style="color:var(--or);font-size:2.2rem;margin-bottom:12px;letter-spacing:6px">✦ ✦ ✦</div>
-            <p style="color:#C4B8A8;font-weight:300;font-size:0.85rem;letter-spacing:3px;text-transform:uppercase">Marguerite Saphir</p>
-          </div>
-        </div>
+        <img src="mariage.jpg" alt="Marguerite Saphir" style="width:100%;border-radius:16px 16px 0 0;height:420px;object-fit:cover;object-position:center 20%;display:block;border:3px solid var(--or);border-bottom:none">
         <div style="background:var(--marron);border-radius:0 0 14px 14px;padding:22px 28px;border-left:4px solid var(--or)">
-          <p style="color:#C4B8A8;font-weight:300;font-size:0.95rem;line-height:1.7;font-style:italic">"Ton CDI est un tremplin, pas une destination. La femme de Proverbes 31 ne s'est pas contentée de prier — elle a acheté, planté, construit. Tu en as la permission."</p>
+          <p style="color:#C4B8A8;font-weight:300;font-size:0.95rem;line-height:1.7;font-style:italic">"Ta vraie sécurité, ce n'est pas le salaire qui tombe. C'est ce que tu portes en toi — et ta capacité à le transformer en quelque chose à transmettre."</p>
           <p style="color:var(--or);font-weight:600;font-size:0.82rem;margin-top:12px;letter-spacing:1px">— Marguerite Saphir</p>
         </div>
       </div>
